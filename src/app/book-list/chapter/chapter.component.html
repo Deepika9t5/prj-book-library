@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form>
+                <div class="form-group">
+                    <app-book-list *ngFor="let El of bookmodel" [book]="El" (selected)="onSubjectSelected(El)"></app-book-list>
+                    <!-- <label for="subjectname" >Subject Name</label> -->
+                    
+                </div>
+                <div class="form-group">
+                    <label for="bookname">Book Name</label>
+                </div>
+                <div class="form-group">
+                    <h4>Chater Content:</h4>
+                    <label for="bookname">Book Name</label>
+                    <!-- dropdown -->
+                    <input type="text" class="form-control" id="bookname" #booknameinput>
+                </div>
+                <div class="form-group">
+                    <label for="chaptername">Chapter Name</label>
+                    <input type="text" class="form-control" id="chaptername" #chapternameinput>
+                </div>
+                <div class="form-group">
+                    <label for="chapterdescription">Chapter Description</label>
+                    <input type="text" class="form-control" id="chapterdescription" #booknameinput>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

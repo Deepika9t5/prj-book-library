@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- <div class="row">
+        <div class="com-sm-8">
+            <button class="btn btn-primary" routerLink="/addbook">Go To Home</button>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="com-sm-8">
+            <a routerLink="/addChapter" (click)="onSelected()">M 1</a>
+            <a routerLink="/addChapter">M 2</a>
+            <a *ngFor="let mathBook of mathsBooksList">
+                {{mathBook.name}}
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="com-sm-8">
+            <button class="btn btn-primary" routerLink="/addChapter">Add Chapter</button>
+        </div>
+    </div>
+</div>
