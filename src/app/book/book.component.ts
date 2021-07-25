@@ -54,13 +54,15 @@ export class BookComponent implements OnInit {
     alert("Saved!!")
      const subjectName = this.subjectnameInputRef.nativeElement.value;
      const bookName = this.booknameInputRef.nativeElement.value;
-     console.log(subjectName, bookName)
+    //console.log(subjectName, bookName)
      const newList = new Booklist(subjectName, bookName);
-     this.bookAdded.emit(newList);
+    //  this.bookAdded.emit(newList);
+     this.booksService.addBook(newList);
+     
 
-     this.mathsBookList.push(newList);
+    //  this.mathsBookList.push(newList);
 
-     this.booksService.setMathsBooks(this.mathsBookList);
+    //  this.booksService.setMathsBooks(this.mathsBookList);
   }
 
 }

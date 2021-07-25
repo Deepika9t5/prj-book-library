@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject } from 'rxjs';
-import 'rxjs/add/operator/map';
+//import 'rxjs/add/operator/map';
 //import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Booklist } from './book-list/book-list.model';
@@ -18,16 +18,24 @@ export class BookService {
     mathsBooksObservable = this.mathsBooks.asObservable();
     subject : number;
     maths:any;
+    list = [];
 
     constructor() {
 
-        if(this.subject != null || this.subject != undefined){
-          this.maths = this.mathsBooks
-        )
-        }
+        // if(this.subject != null || this.subject != undefined){
+        //   this.maths = this.mathsBooks
+        // )
+        // }
     }
 
-    
+    addBook(book: any){
+        this.list.push(book);
+        console.log(this.list);
+    }
+
+    getBook(id){
+        
+    }
 
     getMathsBooks(): any {
         const headerObservable = new Observable(observer => {
